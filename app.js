@@ -1,9 +1,9 @@
 var express = require('express');
-var io = require("socket.io")(http);
 var app = express();
 app.use(express.static('public')); 
 var http = require('http').Server(app);
 var port = process.env.PORT || 3000;
+var io = require("socket.io")(http);
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/default.html');
